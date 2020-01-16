@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Disha Learning | Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #contact{
+        border: 2px solid black;
+        padding :50px 200px 50px 50px;
+
+    }
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  background-color: white;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+    </style>
+    <link rel="stylesheet" href='{% static "signinsignup.css" %}'>
+    <link rel="stylesheet" href='{% static "commonstyle.css" %}'>
+    <title>Disha Learning</title></head>
+<body>
+<header>
+    <div id="head">
+        <ul>
+            <li style="float:left"><img src='{% static "images/logo2.jpg" %}' alt="Logo 2"></li>
+        </ul>
+
+    </div>
+</header>
+
+<div id="menu">
+    <ul style="background-color:limegreen">
+        <li style="float:left"><a href="/">Home</a></li>
+        <li style="float:left"><a href="/course">Courses</a></li>
+        <li style="float:left"><a href="/gallery">Gallery</a></li>
+        <li style="float:left"><a href="/faculty">Our Faculty</a></li>
+        <li><a href="/quizportal">Quiz Portal</a></li>
+        <li style="border-left:2px solid white"><a href="/contact">Contact Us</a></li>
+
+    </ul>
+</div>
+<div class="container">
+    <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>Disha Learning</p>
+        <p>#3449<br>Sector 46/C<br>Chandigarh</p>
+        <p>(+91)9779103449</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.741818930346!2d76.7615313144791!3d30.69753948164938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec4230c95f01%3A0x5d1b19688b9e39d1!2sDisha+Learning%2CChandigarh!5e0!3m2!1sen!2sin!4v1555579099824!5m2!1sen!2sin"
+                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="phoneno">Contact Number</label><br>
+                <input type="text" id="phoneno" name="phoneno" placeholder="(+91)__________">
+                <br>
+                <label for="subject">Subject</label><br>
+                <textarea id="subject" name="subject" placeholder="Write something.."
+                          style="height:200px;width:100%"></textarea><br>
+
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

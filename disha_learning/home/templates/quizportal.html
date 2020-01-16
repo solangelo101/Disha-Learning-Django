@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='{% static "commonstyle.css" %}'>
+    <link rel="stylesheet" href='{% static "signinsignup.css" %}'>
+    <style>
+
+    </style>
+    <title>Disha Learning</title></head>
+<body>
+<header>
+    <div id="head">
+        <ul>
+            <li style="float:left"><img src='{% static "images/logo2.jpg" %}' alt="Logo 2"></li>
+        </ul>
+
+    </div>
+</header>
+<div id="menu">
+    <ul style="background-color:limegreen">
+        <li style="float:left"><a href="/">Home</a></li>
+        <li style="float:left"><a href="/course">Courses</a></li>
+        <li style="float:left"><a href="/gallery">Gallery</a></li>
+        <li style="float:left"><a href="/faculty">Our Faculty</a></li>
+        <li><a href="/quizportal">Quiz Portal</a></li>
+        <li style="border-left:2px solid white"><a href="/contact">Contact Us</a></li>
+
+    </ul>
+</div>
+<div id="form">
+    <form>
+        <label>Name</label>
+        <input type="text" required>
+        <br>
+        <label>Email</label>
+        <input type="email" style="width:100%">
+        <br>
+        <label>Class</label>
+        <select name="class">
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <br>
+        <label>Subject</label>
+        <br>
+        <input type="radio">Physics
+        <input type="radio">Mathematics
+        <input type="radio">Both
+        <br>
+        <label>Password</label>
+        <input type="password">
+        <br>
+        <label>Re-enter Password</label>
+        <input type="password">
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <a href="/loginquiz">Or Login?</a>
+    </form>
+</div>
+
+</body>
+</html>
